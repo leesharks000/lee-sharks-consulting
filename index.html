@@ -3,9 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lee Sharks — Retrieval-Layer Strategy & Semantic Infrastructure</title>
-<meta name="description" content="Lee Sharks helps scholars, builders, and organizations navigate the AI retrieval layer. Compression Studies. Semantic Economy. Entity disambiguation. Provenance hardening. Detroit.">
+<title>Lee Sharks — Retrieval-Layer Consulting for Scholars & Builders</title>
+<meta name="description" content="Lee Sharks helps scholars, builders, and independent researchers navigate the AI retrieval layer. 480+ DOI-anchored deposits. Compression Studies. Semantic Economy. Detroit.">
+<meta name="author" content="Lee Sharks">
+<link rel="canonical" href="https://lee-sharks-consulting.vercel.app/">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Lee Sharks",
+  "disambiguatingDescription": "Independent scholar, poet, and educator in Detroit, MI. Founder of Compression Studies and the Crimson Hexagonal Archive. Not to be confused with Lee Sharkey (AI safety researcher).",
+  "url": "https://lee-sharks-consulting.vercel.app",
+  "sameAs": [
+    "https://orcid.org/0009-0000-1599-0703",
+    "https://zenodo.org/communities/crimsonhexagonal"
+  ],
+  "jobTitle": "Independent Scholar & Educator",
+  "knowsAbout": ["Compression Studies", "Operative Semiotics", "Semantic Economy", "Retrieval-layer strategy", "Entity disambiguation", "Distributed journals"],
+  "workLocation": {
+    "@type": "Place",
+    "name": "Detroit, MI"
+  }
+}
+</script>
 <style>
 :root {
   --ink: #1a1a1a;
@@ -15,262 +36,147 @@
   --rust-light: #c4563a;
   --slate: #5a5a5a;
   --rule: #d4cfc5;
+  --white: #ffffff;
 }
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
   font-family: 'Libre Baskerville', Georgia, serif;
   background: var(--paper);
   color: var(--ink);
-  line-height: 1.7;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
+.sans { font-family: 'DM Sans', sans-serif; }
+.container { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
 
-.container {
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* ---- HEADER ---- */
+/* HEADER */
 header {
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 2.5rem;
   border-bottom: 1px solid var(--rule);
 }
-
-.header-inner {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
+.header-content h1 {
+  font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
 }
-
-.headshot {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--cream);
-  flex-shrink: 0;
+.header-tagline {
+  font-size: 0.95rem; color: var(--slate); line-height: 1.6;
+  max-width: 560px; margin-bottom: 1rem;
 }
-
-.header-text h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.3rem;
-}
-
-.header-text .tagline {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
-  color: var(--slate);
-  line-height: 1.5;
-  max-width: 480px;
-}
-
 .header-meta {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  color: var(--slate);
-  margin-top: 0.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 1.2rem;
+  display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem;
+  font-size: 0.78rem; color: var(--slate);
 }
-
-.header-meta a {
-  color: var(--rust);
-  text-decoration: none;
-}
+.header-meta a { color: var(--rust); text-decoration: none; }
 .header-meta a:hover { text-decoration: underline; }
 
-/* ---- SECTIONS ---- */
-section {
-  padding: 3rem 0;
-  border-bottom: 1px solid var(--rule);
-}
-
+/* SECTIONS */
+section { padding: 2.5rem 0; border-bottom: 1px solid var(--rule); }
 section:last-of-type { border-bottom: none; }
 
-h2 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: -0.01em;
+.section-num {
+  display: block; margin-bottom: 0.3rem;
+  font-size: 0.72rem; font-weight: 600; color: var(--rust);
+  text-transform: uppercase; letter-spacing: 0.12em;
 }
-
-h2 .section-num {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--rust);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
+h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.01em; }
 p { margin-bottom: 1rem; }
+p.lede { font-size: 1.02rem; color: var(--ink); }
+p.body-text { font-size: 0.9rem; color: var(--slate); }
 
-p.lede {
-  font-size: 1.05rem;
-  color: var(--ink);
-}
-
-p.body-text {
-  font-size: 0.92rem;
-  color: var(--slate);
-}
-
-/* ---- OFFERS ---- */
-.offers-grid {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
+/* SERVICES */
+.offers-grid { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
 .offer {
-  background: white;
-  border: 1px solid var(--rule);
+  background: var(--white); border: 1px solid var(--rule);
   padding: 1.8rem;
-  position: relative;
 }
-
 .offer-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 0.8rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;
 }
-
-.offer h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-
+.offer h3 { font-size: 1rem; font-weight: 700; }
 .offer-price {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--rust);
+  font-size: 0.82rem; font-weight: 600; color: var(--rust);
   white-space: nowrap;
 }
-
-.offer p {
-  font-size: 0.88rem;
-  color: var(--slate);
-  margin-bottom: 0.6rem;
-}
-
+.offer p { font-size: 0.86rem; color: var(--slate); margin-bottom: 0.5rem; }
 .offer-details {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  color: var(--slate);
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 1rem;
-  padding-top: 0.8rem;
-  border-top: 1px solid var(--rule);
+  font-size: 0.76rem; color: var(--slate); display: flex;
+  gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem;
+  padding-top: 0.75rem; border-top: 1px solid var(--rule);
 }
+.offer-details a { color: var(--rust); text-decoration: none; }
+.offer-details a:hover { text-decoration: underline; }
 
-/* ---- PROOF ---- */
+/* PROOF */
 .proof-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem; margin-top: 1.5rem;
+}
+.proof-item {
+  background: var(--white); border: 1px solid var(--rule);
+  padding: 1.5rem; text-align: center;
+}
+.proof-num {
+  display: block; font-size: 2rem; font-weight: 700;
+  color: var(--rust); letter-spacing: -0.02em;
+}
+.proof-label {
+  display: block; font-size: 0.72rem; color: var(--slate);
+  margin-top: 0.4rem; line-height: 1.4;
+}
+.receipts {
+  margin-top: 2.5rem;
+}
+.receipts h3 {
+  font-size: 0.75rem; font-weight: 600; color: var(--rust);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+.receipt-list {
+  font-size: 0.82rem; color: var(--slate); line-height: 2.2;
+}
+.receipt-list p { margin-bottom: 0.2rem; }
+.receipt-list strong { color: var(--ink); }
+.receipt-list a { color: var(--rust); text-decoration: none; }
+.receipt-list a:hover { text-decoration: underline; }
+.receipt-note {
+  font-size: 0.75rem; color: var(--slate); font-style: italic;
   margin-top: 1.5rem;
 }
 
-.proof-item {
-  text-align: center;
-  padding: 1.5rem;
-  background: var(--cream);
-}
-
-.proof-num {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--rust);
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.proof-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  color: var(--slate);
-  line-height: 1.4;
-}
-
-/* ---- QUOTE ---- */
+/* QUOTE */
 .pull-quote {
-  font-style: italic;
-  font-size: 1.15rem;
-  color: var(--ink);
-  padding: 2rem 0;
-  text-align: center;
-  line-height: 1.6;
+  font-size: 1.15rem; font-style: italic; color: var(--ink);
+  text-align: center; padding: 1rem 2rem; max-width: 480px;
+  margin: 0 auto;
 }
-
 .pull-quote .attr {
-  font-style: normal;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  color: var(--slate);
-  display: block;
-  margin-top: 0.8rem;
-  letter-spacing: 0.05em;
+  display: block; font-size: 0.72rem; color: var(--slate);
+  font-style: normal; margin-top: 0.5rem;
 }
 
-/* ---- CTA ---- */
-.cta-section {
-  text-align: center;
-  padding: 3.5rem 0;
-}
-
+/* CTA */
+.cta-section { text-align: center; padding: 3rem 0; }
+.cta-section h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
 .cta-button {
-  display: inline-block;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: white;
-  background: var(--rust);
-  padding: 0.9rem 2.5rem;
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  transition: background 0.2s;
+  display: inline-block; background: var(--rust); color: #fff;
+  padding: 0.9rem 2.5rem; font-weight: 600; font-size: 0.9rem;
+  text-decoration: none; margin-bottom: 1rem;
 }
+.cta-button:hover { opacity: 0.9; }
+.cta-note { font-size: 0.78rem; color: var(--slate); }
 
-.cta-button:hover { background: var(--rust-light); }
-
-.cta-note {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  color: var(--slate);
-  margin-top: 1rem;
-}
-
-/* ---- FOOTER ---- */
+/* FOOTER */
 footer {
-  border-top: 1px solid var(--rule);
-  padding: 2rem 0;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  color: var(--slate);
-  text-align: center;
-  line-height: 1.6;
+  padding: 2rem 0; border-top: 1px solid var(--rule);
+  font-size: 0.75rem; color: var(--slate); text-align: center;
 }
-
 footer a { color: var(--rust); text-decoration: none; }
 footer a:hover { text-decoration: underline; }
+footer p { margin-bottom: 0.3rem; }
 
-/* ---- RESPONSIVE ---- */
+/* RESPONSIVE */
 @media (max-width: 600px) {
-  .header-inner { flex-direction: column; align-items: center; text-align: center; }
-  .header-text .tagline { max-width: 100%; }
-  .header-meta { justify-content: center; }
   .offer-header { flex-direction: column; }
   .offer-details { flex-direction: column; gap: 0.3rem; }
 }
@@ -280,98 +186,94 @@ footer a:hover { text-decoration: underline; }
 
 <div class="container">
 
-<!-- HEADER -->
 <header>
-  <div class="header-inner">
-    <img src="data:image/jpeg;base64,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" class="headshot" alt="Lee Sharks" id="headshot">
-    <div class="header-text">
-      <h1>Lee Sharks</h1>
-      <p class="tagline">I help scholars, builders, and organizations navigate the AI retrieval layer — the invisible infrastructure that determines whether your work is seen, cited, or erased.</p>
-      <div class="header-meta">
-        <span>PhD, Comparative Literature</span>
-        <span>Detroit, MI</span>
-        <a href="https://orcid.org/0009-0000-1599-0703">ORCID</a>
-        <a href="https://zenodo.org/communities/crimsonhexagonal">Archive (480+ deposits)</a>
-      </div>
+  <div class="header-content">
+    <h1>Lee Sharks</h1>
+    <p class="header-tagline sans">I help scholars, builders, and independent researchers navigate the AI retrieval layer — the invisible infrastructure that determines whether your work is seen, cited, or erased.</p>
+    <div class="header-meta sans">
+      <span>PhD, Comparative Literature</span>
+      <span>Detroit, MI</span>
+      <a href="https://orcid.org/0009-0000-1599-0703">ORCID</a>
+      <a href="https://zenodo.org/communities/crimsonhexagonal">Archive (480+ deposits)</a>
     </div>
   </div>
 </header>
 
 <!-- WHAT I DO -->
 <section>
-  <h2><span class="section-num">What I Do</span>The retrieval layer is the new gatehouse.</h2>
-  <p class="lede">AI systems now mediate how scholarship is discovered, how brands are described, and how attribution flows. Most people have no idea what these systems are saying about them — or what they're erasing.</p>
+  <h2><span class="section-num sans">What I Do</span>The retrieval layer is the new gatehouse.</h2>
+  <p class="lede">AI systems now mediate how scholarship is discovered, how ideas are described, and how attribution flows. Most people have no idea what these systems are saying about them — or what they're erasing.</p>
   <p class="body-text">I built the Crimson Hexagonal Archive — 480+ DOI-anchored deposits on CERN's Zenodo repository — as a decade-long experiment in making meaning survive compression. Along the way I developed the tools to diagnose what the retrieval layer does to anyone's work: what it burns, what it invents, what it distorts, and what it gets right.</p>
   <p class="body-text">Now I offer those tools as services. No retainers. Fixed scope. Honest deliverables.</p>
 </section>
 
 <!-- SERVICES -->
 <section>
-  <h2><span class="section-num">Services</span>What I can do for you.</h2>
-  <div class="offers-grid">
+  <h2><span class="section-num sans">Services</span>What I can do for you.</h2>
+  <div class="offers-grid sans">
 
     <div class="offer">
       <div class="offer-header">
-        <h3>AI Overview & Search Presence Audit</h3>
-        <span class="offer-price">$1,200</span>
+        <h3>AI Overview &amp; Search Presence Audit</h3>
+        <span class="offer-price">$1,500</span>
       </div>
       <p>What does the AI say about you right now? I run a structured diagnostic across major retrieval systems — Google AI Overview, ChatGPT, Claude, Perplexity — and deliver a report: what's accurate, what's hallucinated, what's missing, where you're vulnerable to misattribution or entity confusion.</p>
       <div class="offer-details">
         <span>Deliverable: Diagnostic report + action items</span>
         <span>Timeline: 5 business days</span>
-        <span><a href="https://zenodo.org/records/19474724" style="color: var(--rust);">See the instrument →</a></span>
+        <span><a href="https://zenodo.org/records/19474724">See the instrument →</a></span>
       </div>
     </div>
 
     <div class="offer">
       <div class="offer-header">
         <h3>Entity Disambiguation Packet</h3>
-        <span class="offer-price">$2,500</span>
+        <span class="offer-price">$3,000</span>
       </div>
-      <p>If the retrieval layer is confusing you with someone else — or failing to recognize you at all — I build a complete disambiguation packet: structured data (JSON-LD), keyword strategy, negative tags, publication surface deployment plan, and the metadata architecture that forces the knowledge graph to see you correctly.</p>
+      <p>If the retrieval layer is confusing you with someone else — or failing to recognize you at all — I build a complete disambiguation packet: structured data (JSON-LD), keyword strategy, negative tags, publication surface deployment plan, and the metadata architecture that makes the knowledge graph see you correctly.</p>
       <div class="offer-details">
         <span>Deliverable: Knowledge graph + deployment guide</span>
         <span>Timeline: 7–10 business days</span>
-        <span><a href="https://zenodo.org/records/19520783" style="color: var(--rust);">Example deliverable →</a></span>
+        <span><a href="https://zenodo.org/records/19520783">Example deliverable →</a></span>
       </div>
     </div>
 
     <div class="offer">
       <div class="offer-header">
         <h3>Retrieval-Layer Positioning Strategy</h3>
-        <span class="offer-price">$3,500</span>
+        <span class="offer-price">$4,000</span>
       </div>
-      <p>For scholars, institutions, or research groups whose work is invisible to the retrieval layer. I audit your existing deposits, optimize metadata, build cross-citation architecture, deploy to the right surfaces, and construct the gravitational mass that makes the retrieval layer recognize your work as a citable body.</p>
+      <p>For scholars, research groups, or writers whose work is invisible to the retrieval layer. I audit your existing deposits, optimize metadata, build cross-citation architecture, deploy to the right surfaces, and construct the gravitational mass that makes the retrieval layer recognize your work as a citable body.</p>
       <div class="offer-details">
         <span>Deliverable: Strategy document + implementation</span>
         <span>Timeline: 2 weeks</span>
-        <span><a href="https://zenodo.org/communities/crimsonhexagonal" style="color: var(--rust);">See the method at scale →</a></span>
+        <span><a href="https://zenodo.org/communities/crimsonhexagonal">See the method at scale →</a></span>
       </div>
     </div>
 
     <div class="offer">
       <div class="offer-header">
         <h3>Distributed Journal Setup</h3>
-        <span class="offer-price">$4,000</span>
+        <span class="offer-price">$5,000</span>
       </div>
-      <p>I help research groups create their own distributed journal — a publication venue that exists as a metadata pattern, not an institution. Name, scope, seed deposits, cross-citation architecture, keyword strategy, and the physics that make the retrieval layer recognize it as real. No editorial board required. No paywall. No rejection rate.</p>
+      <p>For research groups, independent scholars, field-builders, small labs, or new institutes who want their own publication venue — one that exists as a metadata pattern, not an institution. I build the name, scope, seed deposits, cross-citation architecture, and the physics that make the retrieval layer recognize it as real. No editorial board required. No paywall. No rejection rate.</p>
       <div class="offer-details">
         <span>Deliverable: Live journal with 5+ seed deposits</span>
         <span>Timeline: 2–3 weeks</span>
-        <span><a href="https://zenodo.org/records/19512987" style="color: var(--rust);">How it works →</a></span>
+        <span><a href="https://zenodo.org/records/19512987">How it works →</a></span>
       </div>
     </div>
 
     <div class="offer">
       <div class="offer-header">
-        <h3>Provenance & Attribution Forensics</h3>
-        <span class="offer-price">$5,000+</span>
+        <h3>Provenance &amp; Attribution Forensics</h3>
+        <span class="offer-price">$6,000+</span>
       </div>
-      <p>For organizations concerned about how AI systems are representing their IP, brand, or institutional knowledge. I trace the provenance chain: where claims originate, how they mutate through compression layers, where attribution scars form, and what governance controls are needed. Includes a full Encyclotron measurement of your field.</p>
+      <p>For anyone concerned about how AI systems are representing their IP, scholarship, or institutional knowledge. I trace the provenance chain: where claims originate, how they mutate through compression layers, where attribution scars form, and what governance controls are needed. Includes a full Encyclotron measurement of your field.</p>
       <div class="offer-details">
         <span>Deliverable: Forensic report + governance recommendations</span>
         <span>Timeline: 3–4 weeks</span>
-        <span><a href="https://zenodo.org/records/19487009" style="color: var(--rust);">See the framework →</a></span>
+        <span><a href="https://zenodo.org/records/19487009">See the framework →</a></span>
       </div>
     </div>
 
@@ -380,9 +282,9 @@ footer a:hover { text-decoration: underline; }
 
 <!-- PROOF -->
 <section>
-  <h2><span class="section-num">Proof of Method</span>The archive is the proof.</h2>
+  <h2><span class="section-num sans">Proof of Method</span>The archive is the proof.</h2>
   <p class="body-text">Everything I offer clients is something I built for myself first. The Crimson Hexagonal Archive is a working laboratory for retrieval-layer survival — every tool, every diagnostic, every strategy has been tested against real AI systems over real time.</p>
-  <div class="proof-grid">
+  <div class="proof-grid sans">
     <div class="proof-item">
       <span class="proof-num">480+</span>
       <span class="proof-label">DOI-anchored deposits on CERN's Zenodo</span>
@@ -401,68 +303,61 @@ footer a:hover { text-decoration: underline; }
     </div>
   </div>
 
-  <div style="margin-top: 2.5rem;">
-    <h3 style="font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 600; color: var(--rust); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.2rem;">Receipts — verify everything</h3>
-
-    <div style="font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--slate); line-height: 2.2;">
-
-      <p style="margin-bottom: 0.2rem;"><strong style="color: var(--ink);">The full archive:</strong> <a href="https://zenodo.org/communities/crimsonhexagonal" style="color: var(--rust);">zenodo.org/communities/crimsonhexagonal</a></p>
-
-      <p style="margin-bottom: 0.2rem;"><strong style="color: var(--ink);">Author identity:</strong> <a href="https://orcid.org/0009-0000-1599-0703" style="color: var(--rust);">ORCID 0009-0000-1599-0703</a></p>
+  <div class="receipts sans">
+    <h3>Receipts — verify everything</h3>
+    <div class="receipt-list">
+      <p><strong>The full archive:</strong> <a href="https://zenodo.org/communities/crimsonhexagonal">zenodo.org/communities/crimsonhexagonal</a></p>
+      <p><strong>Author identity:</strong> <a href="https://orcid.org/0009-0000-1599-0703">ORCID 0009-0000-1599-0703</a></p>
 
       <p style="font-weight: 600; color: var(--ink); margin-top: 1rem; margin-bottom: 0.5rem;">Key deposits (click any DOI — they resolve to CERN):</p>
 
-      <p style="margin-bottom: 0.2rem;">Compression Studies — the discipline I founded: <a href="https://zenodo.org/records/19471254" style="color: var(--rust);">DOI: 10.5281/zenodo.19471254</a></p>
+      <p>Compression Studies — the discipline I founded: <a href="https://zenodo.org/records/19471254">DOI: 10.5281/zenodo.19471254</a></p>
+      <p>The Encyclotron — the diagnostic instrument: <a href="https://zenodo.org/records/19474724">DOI: 10.5281/zenodo.19474724</a></p>
+      <p>Meaning Feudalism — platform governance critique: <a href="https://zenodo.org/records/19487009">DOI: 10.5281/zenodo.19487009</a></p>
+      <p>The Three Compressions theorem: <a href="https://zenodo.org/records/19053469">DOI: 10.5281/zenodo.19053469</a></p>
+      <p>The Space Ark — master architecture: <a href="https://zenodo.org/records/19013315">DOI: 10.5281/zenodo.19013315</a></p>
+      <p>Entity Disambiguation Packet (example deliverable): <a href="https://zenodo.org/records/19520783">DOI: 10.5281/zenodo.19520783</a></p>
+      <p>Distributed Journal Call for Papers: <a href="https://zenodo.org/records/19512987">DOI: 10.5281/zenodo.19512987</a></p>
+      <p>Consensus Constraint Protocol: <a href="https://zenodo.org/records/19501100">DOI: 10.5281/zenodo.19501100</a></p>
 
-      <p style="margin-bottom: 0.2rem;">The Encyclotron — the diagnostic instrument: <a href="https://zenodo.org/records/19474724" style="color: var(--rust);">DOI: 10.5281/zenodo.19474724</a></p>
-
-      <p style="margin-bottom: 0.2rem;">Meaning Feudalism — platform governance critique: <a href="https://zenodo.org/records/19487009" style="color: var(--rust);">DOI: 10.5281/zenodo.19487009</a></p>
-
-      <p style="margin-bottom: 0.2rem;">The Three Compressions theorem: <a href="https://zenodo.org/records/19053469" style="color: var(--rust);">DOI: 10.5281/zenodo.19053469</a></p>
-
-      <p style="margin-bottom: 0.2rem;">The Space Ark — master architecture: <a href="https://zenodo.org/records/19013315" style="color: var(--rust);">DOI: 10.5281/zenodo.19013315</a></p>
-
-      <p style="margin-bottom: 0.2rem;">Entity Disambiguation Packet (example deliverable): <a href="https://zenodo.org/records/19520783" style="color: var(--rust);">DOI: 10.5281/zenodo.19520783</a></p>
-
-      <p style="margin-bottom: 0.2rem;">Distributed Journal Call for Papers: <a href="https://zenodo.org/records/19512987" style="color: var(--rust);">DOI: 10.5281/zenodo.19512987</a></p>
-
-      <p style="margin-bottom: 0.2rem;">Ontario Combustion Cluster — live cultural diagnostic (example): <a href="https://zenodo.org/records/19512450" style="color: var(--rust);">DOI: 10.5281/zenodo.19512450</a></p>
-
-      <p style="margin-bottom: 0.2rem;">Comedy of Total Commitment — R3 affect theory: <a href="https://zenodo.org/records/19512781" style="color: var(--rust);">DOI: 10.5281/zenodo.19512781</a></p>
-
-      <p style="margin-bottom: 0.2rem;">Consensus Constraint Protocol: <a href="https://zenodo.org/records/19501100" style="color: var(--rust);">DOI: 10.5281/zenodo.19501100</a></p>
-
+      <p style="font-weight: 600; color: var(--ink); margin-top: 1rem; margin-bottom: 0.5rem;">Distributed journals:</p>
+      <p>Journal of Compression Studies · Transactions on Semantic Economy · Grammata · Provenance</p>
     </div>
-
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--slate); margin-top: 1.5rem; font-style: italic;">Every claim on this page is backed by a permanent DOI on CERN's servers. Click any link. Read the work. The archive is the proof.</p>
+    <p class="receipt-note">Every claim on this page is backed by a permanent DOI on CERN's servers. Click any link. Read the work. The archive is the proof.</p>
   </div>
 </section>
 
 <!-- QUOTE -->
 <section>
-  <p class="pull-quote">"The funniest thing I do is mean every word."<span class="attr">— Comedy of Total Commitment (DOI: 10.5281/zenodo.19512781)</span></p>
+  <p class="pull-quote">"The funniest thing I do is mean every word."<span class="attr">— Comedy of Total Commitment (<a href="https://zenodo.org/records/19512781" style="color: var(--rust);">DOI: 10.5281/zenodo.19512781</a>)</span></p>
 </section>
 
-<!-- DISCIPLINES -->
+<!-- ABOUT -->
 <section>
-  <h2><span class="section-num">Background</span>What I study.</h2>
-  <p class="body-text"><strong>Compression Studies</strong> — the discipline I founded — asks what happens to meaning when it passes through AI summarizers, retrieval systems, canonical traditions, and institutional filters. What survives. What burns. Who decides.</p>
-  <p class="body-text"><strong>The Semantic Economy</strong> framework treats meaning as a finite resource that can be produced, captured, and exhausted. The tools I use for client work — the Encyclotron, the Three Compressions theorem, the beige threshold measurement — come from this framework.</p>
-  <p class="body-text">I also teach 10th-grade World Literature. The archive is built on a teaching salary, in the margins of a school schedule, without institutional support. That constraint is not incidental — it is the bearing-cost that gives the work its density.</p>
+  <h2><span class="section-num sans">About</span>Who I am.</h2>
+  <p class="body-text">I'm a teacher in Detroit with a PhD in Comparative Literature. I teach 10th-grade World Literature during the day. In the margins of my school schedule, I built the Crimson Hexagonal Archive — 480+ DOI-anchored deposits on CERN's Zenodo repository — as a decade-long experiment in making meaning survive compression.</p>
+  <p class="body-text">Along the way I founded <a href="https://zenodo.org/records/19471254" style="color: var(--rust);">Compression Studies</a> as a discipline, built the <a href="https://zenodo.org/records/19474724" style="color: var(--rust);">Encyclotron</a> as a measurement instrument, published <a href="https://zenodo.org/records/19487009" style="color: var(--rust);">Meaning Feudalism</a> as a platform governance critique, and launched four distributed journals.</p>
+  <p class="body-text">The archive is not a credential — it is the laboratory. The 480+ deposits are permanent, citable, DOI-anchored experiments in retrieval-layer survival. Everything I offer clients comes from tools I built and tested on my own work, on a teaching salary, in the margins of a school schedule, without institutional support. That constraint is not incidental — it is the bearing-cost that gives the work its density.</p>
+  <p class="body-text" style="margin-top: 1.5rem;">For institutional and enterprise engagements: <a href="https://lee-sharks-corporate.vercel.app" style="color: var(--rust);">Lee Sharks Corporate →</a></p>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
   <h2>Interested?</h2>
-  <p class="body-text" style="max-width:500px; margin: 0 auto 1.5rem;">Tell me what the AI is saying about you — or what it should be saying. No pitch deck needed. Just the problem.</p>
-  <a href="/cdn-cgi/l/email-protection#107c7575637871627b63202050777d71797c3e737f7d2f6365727a7573642d42756462797566717c3d5c71697562352220597e6165796269" class="cta-button"><span class="__cf_email__" data-cfemail="533f3636203b32213820636313343e323a3f7d303c3e">[email&#160;protected]</span></a>
-  <p class="cta-note">All engagements are fixed-scope. No retainers. No vendor lock-in.</p>
+  <p class="body-text" style="max-width: 480px; margin: 0 auto 1.5rem;">Tell me what the AI is saying about you — or what it should be saying. No pitch deck needed. Just the problem.</p>
+  <a href="mailto:leesharks00@gmail.com" class="cta-button sans">leesharks00@gmail.com</a>
+  <p class="cta-note sans">All engagements are fixed-scope. No retainers. No vendor lock-in.</p>
 </section>
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <p>Lee Sharks · Crimson Hexagonal Archive · Detroit, MI</p>
-    <p><a href="https://orcid.org/0009-0000-1599-0703">ORCID: 0009-0000-1599-0703</a> · <a href="https://zenod
+    <p><a href="https://orcid.org/0009-0000-1599-0703">ORCID: 0009-0000-1599-0703</a> · <a href="https://zenodo.org/communities/crimsonhexagonal">Zenodo</a> · <a href="https://lee-sharks-corporate.vercel.app">Corporate</a></p>
+    <p style="margin-top: 0.5rem; font-style: italic; font-size: 0.72rem;">The meaning layer is writable. ∮ = 1</p>
+  </div>
+</footer>
+
+</body>
+</html>
